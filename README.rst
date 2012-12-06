@@ -26,18 +26,22 @@ Instructions for MacOSX
  2) Run "myppy PortablePython init" to initialize a portable python build
  3) Run "myppy PortablePython install py_pyside py_py2app" to get deps
  4) Run "myppy PortablePython shell" to get a shell using that python
- 5)     Run "pip install esky" to install esky dependency
- 6)     Run "python setup.py bdist_esky" to build the application bundle
+ 5) Run "python trayicon.py" to check that it works
+ 6) Install esky from master github branch
+ 7) Run "python setup.py bdist_esky" to build the application bundle
 
 
 Instructions for Linux
 ----------------------
 
- 1) Ensure you're on an LSB-compatible system capable of building 32-bit.
+ 1) Ensure you're on an LSB-compatible system capable of building 32-bit
+      * you'll likely need to install lsb support package, x11 devel headers
+        and the rpm2cpio utility
  2) Install myppy from github master
  3) Run "myppy PortablePython init" to initialize a portable python build
  4) Run "myppy PortablePython install py_pyside py_cxfreeze" to get deps
  5) Run "myppy PortablePython shell" to get a shell using that python
- 6)     Run "pip install esky" to install esky dependency
- 7)     Run "python setup.py bdist_esky" to build the application bundle
-  
+ 6) Run "python trayicon.py" to check that it works
+ 7) Install esky from master github branch
+ 8) Run "python setup.py bdist_esky" to build the application bundle
+

@@ -34,6 +34,12 @@ if sys.platform == "darwin":
         "plist": {"LSUIElement": 1},
     }
 
+elif sys.platform == "win32":
+    esky_opts["freezer_module"] = "py2exe"
+
+else:
+    esky_opts["freezer_module"] = "cxfreeze"
+
 
 setup(
   name = "trayicondemo",

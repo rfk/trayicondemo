@@ -38,7 +38,7 @@ class DaemonWithTrayIcon(QtGui.QApplication):
     you should see the following behaviours:
 
         * tray icon appears at startup
-        * clicking tray icon gives context menu with "quit" option
+        * clicking tray icon gives context menu with "open" and "quit" options
         * double-clicking tray icon brings up a message window where supported
         * connecting to localhost:8080 will echo an example message
 
@@ -71,9 +71,10 @@ class DaemonWithTrayIcon(QtGui.QApplication):
         self.exit(exit_code)
 
     def create_gui(self):
-        # Create a message window, but don't show it straight away.
+        # Create a main message window.
         # In a real app this might be e.g. the configuration UI.
         self.main_window = QtGui.QLabel("Hello Example!")
+        self.main_window.show()
 
         # Re-use the window icon as the system tray icon.
         # On Ubuntu, it appears this will only work if the icon is
