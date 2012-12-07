@@ -103,7 +103,7 @@ class DaemonWithTrayIcon(QtGui.QApplication):
 
     def _on_tray_icon_activated(self,reason):
         if reason == QtGui.QSystemTrayIcon.DoubleClick:
-            self.main_win.show()
+            self.main_window.show()
 
     def start_socket_handlers(self):
         # Bind to the socket from the main thread.
